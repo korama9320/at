@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
@@ -13,7 +13,8 @@ import { CreditPipe } from './pipes/credit.pipe';
 import { AgePipe } from './pipes/age.pipe';
 import { ShopingCartComponent } from './shoping-cart/shoping-cart.component';
 import { CartComponent } from './cart/cart.component';
-import {AppRoutingModule} from './router/router.module'
+import { AppRoutingModule } from './router/router.module';
+import { ApiCallComponent } from './api-call/api-call.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,15 @@ import {AppRoutingModule} from './router/router.module'
     AgePipe,
     ShopingCartComponent,
     CartComponent,
-    
+    ApiCallComponent,
   ],
-  imports: [BrowserModule, ReactiveFormsModule, FormsModule,AppRoutingModule],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,27 @@
+<h1>table</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>Mobile</th>
+      <th>National Id</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of students">
+      <th>{{ i.ID }}</th>
+      <th>{{ i.Name }}</th>
+      <th>{{ i.Email }}</th>
+      <th>{{ i.Age }}</th>
+      <th>{{ i.Mobile }}</th>
+      <th>{{ i.NationalID }}</th>
+      <td>
+        <button (click)="delete(i.ID)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
