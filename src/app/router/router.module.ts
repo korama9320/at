@@ -2,7 +2,7 @@ import {NgModule,createComponent}from "@angular/core";
 import { CommonModule } from '@angular/common';
 import {  RouterModule,Routes} from "@angular/router";
 import{MainComponent} from "../main/main.component"
-import{CartComponent}from"../cart/cart.compoment"
+import{CartComponent}from"../cart/cart.component"
 
 let routes:Routes=[
     {path:'home',component:MainComponent,pathMatch:"full"},
@@ -16,4 +16,4 @@ let routes:Routes=[
   exports:[RouterModule],
    imports:[RouterModule.forRoot(routes)]
 })
-export class RouterModule { }
+export class AppRoutingModule { }
