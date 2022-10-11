@@ -1,0 +1,21 @@
+<form action="" class="form" [formGroup]="formgr">
+  <label>Name</label>
+  <input type="text" name="name" id="n" formControlName="name" />
+  <label>Email</label>
+  <input type="email" name="email" id="e" formControlName="email" />
+  <label>Password</label>
+
+  <input type="text" name="" id="p" formControlName="password" />
+  <label>Confirm password</label>
+  <input
+    type="text"
+    name=""
+    id="pc"
+    formControlName="cpassword"
+    (blur)="h = formgr.value['password'] == formgr.value['cpassword']"
+    #hh
+  />
+
+  <div [hidden]="h">not matching password</div>
+  <button>submit</button>
+</form>

@@ -1,0 +1,17 @@
+.form {
+  margin-top: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.form > input {
+  width: 50%;
+  height: 5vh;
+}
+.form > label,
+.form > button {
+  margin-top: 5vh;
+}

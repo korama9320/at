@@ -1,0 +1,12 @@
+<h1>{{ "4154566478475345" | credit }}</h1>
+<h1>{{ "2961208284564664" | age }}</h1>
+
+<select [(ngModel)]="selec">
+  <option
+    *ngFor="let item of categories"
+    [value]="item.ID"
+    [selected]="item.ID == selec"
+  >
+    {{ item.Name }}
+  </option></select
+><app-product [selected]="selec" (addToCart)="reciveitem($event)"></app-product>

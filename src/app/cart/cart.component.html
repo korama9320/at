@@ -1,0 +1,11 @@
+<div class="product-container">
+  <div class="product" *ngFor="let i of cartt;let x = index">
+    <img [src]="i.Image" alt="" />
+    <div>
+      <p [innerText]="i.Name"></p>
+      <p [innerText]="i.Quantity"></p>
+      <p [innerText]="i.Price"></p>
+      <button (click)="removeitem(x)">remove</button>
+    </div>
+  </div>
+</div>
